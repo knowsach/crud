@@ -1,0 +1,13 @@
+
+<div *ngIf="hide">
+  <table style="width:100%">
+    <tr>
+      <th>Name</th>
+      <th>Email</th> 
+    </tr>
+    <tr *ngFor="let item of user">
+      <td>{{item.name}}</td>
+      <td>{{item.email}}</td> 
+    </tr>
+  </table>
+  </div>
