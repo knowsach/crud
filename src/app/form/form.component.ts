@@ -14,11 +14,8 @@ export class FormComponent implements OnInit {
    showTable : boolean = false;
 
 
-  // table: user[];
-
   constructor(private empService: EmpService) {
     this.user = new user();
-    // this.table = new Array<user>();
 
   }
 
@@ -26,21 +23,11 @@ export class FormComponent implements OnInit {
 
   }
 
-
-  //function for submitting  
   onSubmit() {
     var newUser = new user();
     newUser = this.user;
     this.empService.addData(newUser);
     this.user = new user();
-
-    console.log(newUser.name);
-    console.log(this._employeService);
-
     this.showTable = true;
-
-    // this.table.push(newUser);
-    // this.displayTable = true;
-    // this.user = new user();
   }
 }
