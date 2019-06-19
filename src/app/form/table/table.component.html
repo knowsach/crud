@@ -1,27 +1,36 @@
-
-<div>
-  <table style="width:100%">
-    <tr>
-      <th class="text-center">Name</th>
-      <th class="text-center">Email</th> 
-      <th class="text-center">Contact</th>
-      <th class="text-center">Address</th>
-      <th class="text-center"> birthday </th>
-      <th class="text-center">Gender</th>
-      <th class="text-center"> date of joining </th>
-      <th class="text-center"> marital status </th>
-    </tr>
-    <tr *ngFor="let item of user">
-      <td class="text-center">{{item.name}}</td>
-      <td class="text-center">{{item.email}}</td> 
-      <td class="text-center"> {{item.contact}} </td>
-      <td class="text-center"> {{item.address}} </td>
-      <td class="text-center"> {{item.dob}} </td>
-      <td class="text-center"> {{item.gender}} </td>
-      <td class="text-center"> {{item.doj}} </td>
-      <td class="text-center"> {{item.marital}} </td>
-      <td class="text-center"> <Button class="btn" (click)="edit(item.id)" style="background: yellow" >Edit</Button> </td>
-      <td class="text-center"> <button class="btn" (click)="deleteItem(item.id , item)" style="background-color: red" >Delete</button> </td>
-    </tr>
-  </table>
+<div  >
+  <div class="header-div">
+      <input id="search-input" type="text" placeholder="search" >
+      <a (click)="routeToForm()"> <svg id="add-logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg> </a>
   </div>
+  <div class="body-div">
+    <div class="table-headher">
+        <div>
+           <table id="table" style="width:100%">
+                   <tr>
+                     <th class="text-center">Name</th>
+                     <th class="text-center">Email</th> 
+                     <th class="text-center">Contact</th>
+                     <th class="text-center">Address</th>
+                     <th class="text-center"> birthday </th>
+                     <th class="text-center">Gender</th>
+                     <th class="text-center"> date of joining </th>
+                     <th class="text-center"> marital status </th>
+                   </tr>
+                   <tr *ngFor="let item of user">
+                           <td class="text-center">{{item.name}}</td>
+                           <td class="text-center">{{item.email}}</td> 
+                           <td class="text-center"> {{item.contact}} </td>
+                           <td class="text-center"> {{item.address}} </td>
+                           <td class="text-center"> {{item.dob}} </td>
+                           <td class="text-center"> {{item.gender}} </td>
+                           <td class="text-center"> {{item.doj}} </td>
+                           <td class="text-center"> {{item.marital}} </td>
+                           <td class="text-center"> <Button class="btn" (click)="edit(item.id)" style="background: yellow" >Edit</Button> </td>
+                           <td class="text-center"> <button class="btn" (click)="deleteItem(item.id , item)" style="background-color: red" >Delete</button> </td>
+                         </tr>
+                   </table>
+                   </div>
+    </div>
+  </div>
+</div>

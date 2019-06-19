@@ -1,6 +1,26 @@
+*{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
 .error{
     color: red;
 }
 .text-center{
 text-align:center;
+}
+
+.form{
+    background: #F5F5F5;
+    height: 755px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+#doj,#dob{
+    border: none;
+}
+
+.form-control{
+    border-radius: 5px;
+    margin-top: 7px;
 }

@@ -1,0 +1,54 @@
+
+
+.header-div{
+    height: 100px;
+    background: #2196F3;
+  }
+  
+  .body-div{
+      background: #F5F5F5;
+      height: 754px;   
+  }
+  
+  .table-header{
+      float: center;
+      align-items: center;
+      border-collapse: collapse;
+  }
+  
+  th{
+      font-weight: normal;
+      font-size: 75%;
+  }
+  #table{
+      border-collapse:separate; 
+      border-spacing:0 15px; 
+  }
+  td{
+      background: white;
+  }
+  text-center{
+      border-spacing: 50px;
+  }
+  
+  #search-input{
+      position: absolute;
+      width: 300px;
+      background: #42A5F5;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      left: 50%;
+      margin-left:-200px;
+      margin-top: 30px;
+      padding: 10px;
+  }
+  #search-input ::placeholder{
+      color: white;
+  }
+  
+  #add-logo{
+      margin-top: 35px;
+      margin-right: 250px;
+      float: right;
+  }

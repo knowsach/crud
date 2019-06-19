@@ -38,4 +38,9 @@ user : user[];
  edit(index : number){
      this.router.navigate(['/empForm',index]);
  } 
-}
+
+ routeToForm(){
+   var num = 0
+  this.router.navigate(['']);
+ }
+} 
