@@ -1,4 +1,11 @@
 export class user {
-    name: string;
-    email: string;
+    id : number;
+    name: string ='';
+    email: string ='';
+    contact : number;
+    gender : any ='';
+    marital : any ='';
+    dob : any = '';
+    doj : any = '';
+    address: string='';
 }

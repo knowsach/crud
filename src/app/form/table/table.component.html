@@ -1,13 +1,27 @@
 
-<div *ngIf="hide">
+<div>
   <table style="width:100%">
     <tr>
-      <th>Name</th>
-      <th>Email</th> 
+      <th class="text-center">Name</th>
+      <th class="text-center">Email</th> 
+      <th class="text-center">Contact</th>
+      <th class="text-center">Address</th>
+      <th class="text-center"> birthday </th>
+      <th class="text-center">Gender</th>
+      <th class="text-center"> date of joining </th>
+      <th class="text-center"> marital status </th>
     </tr>
     <tr *ngFor="let item of user">
-      <td>{{item.name}}</td>
-      <td>{{item.email}}</td> 
+      <td class="text-center">{{item.name}}</td>
+      <td class="text-center">{{item.email}}</td> 
+      <td class="text-center"> {{item.contact}} </td>
+      <td class="text-center"> {{item.address}} </td>
+      <td class="text-center"> {{item.dob}} </td>
+      <td class="text-center"> {{item.gender}} </td>
+      <td class="text-center"> {{item.doj}} </td>
+      <td class="text-center"> {{item.marital}} </td>
+      <td class="text-center"> <Button class="btn" (click)="edit(item.id)" style="background: yellow" >Edit</Button> </td>
+      <td class="text-center"> <button class="btn" (click)="deleteItem(item.id , item)" style="background-color: red" >Delete</button> </td>
     </tr>
   </table>
   </div>
