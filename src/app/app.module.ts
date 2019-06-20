@@ -8,6 +8,9 @@ import { TableComponent } from './form/table/table.component';
 import { FormsModule} from '@angular/forms';
 import { EmpService } from './emp.service';
 import {ReactiveFormsModule} from '@angular/forms';
+import { MatTableModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import {ReactiveFormsModule} from '@angular/forms';
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatButtonModule
   ],
   providers: [EmpService],
   bootstrap: [AppComponent]
