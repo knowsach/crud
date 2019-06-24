@@ -2,7 +2,7 @@ import { Component, OnInit ,Input , ViewChild} from '@angular/core';
 import { EmpService } from 'src/app/emp.service';
 import {user} from '../userData.model';
 import { Router } from '@angular/router';
-import {MatTable } from '@angular/material';
+import {MatTable ,MatTableDataSource, MatSort,MatPaginator,MatPaginatorIntl } from '@angular/material';
 
 @Component({
   selector: 'app-table',
@@ -12,24 +12,32 @@ import {MatTable } from '@angular/material';
 export class TableComponent implements OnInit {
 
 user : user[];
-  datasource : user[]; 
+  datasource ;
+
+
+  @ViewChild(MatTable) table: MatTable<any>;
+  @ViewChild(MatSort) sort : MatSort;
+  @ViewChild(MatPaginator) paginator : MatPaginator;
 
 displayedColumns = ['Name','Email','Contact','Address','Birthday','Gender','Date of Joining','Marital Status','Edit','Delete'];
 
   constructor(private emp:EmpService , private router : Router) {
-    this.datasource = this.emp.getData();
+    this.datasource = new MatTableDataSource( this.emp.getData());
   }
+
 
   ngOnInit() {
     this.user = new Array<user>();
     this.user = this.emp.getData();
     //this.datasource = this.emp.getData();
+    this.datasource.sort = this.sort;
+    this.datasource.paginator = this.paginator;
   }
 
   selectedUser : user;
   index : number;
 
-  @ViewChild(MatTable) table: MatTable<any>;
+
 
 
   //function to delete the selected item from the array.
@@ -50,4 +58,9 @@ displayedColumns = ['Name','Email','Contact','Address','Birthday','Gender','Date
  routeToForm(){
   this.router.navigate(['']);
  }
+
+ filterData(flitervalue : string){
+    this.datasource.filter = flitervalue.toLowerCase(); 
+ }
+
 } 

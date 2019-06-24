@@ -9,7 +9,9 @@ import { FormsModule} from '@angular/forms';
 import { EmpService } from './emp.service';
 import {ReactiveFormsModule} from '@angular/forms';
 import { MatTableModule } from '@angular/material';
-import { MatButtonModule } from '@angular/material';
+import { MatButtonModule,MatPaginatorModule , MatSortModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -24,7 +26,10 @@ import { MatButtonModule } from '@angular/material';
     AppRoutingModule,
     FormsModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    MatPaginatorModule,
+    MatSortModule,
+    BrowserAnimationsModule
   ],
   providers: [EmpService],
   bootstrap: [AppComponent]
